@@ -2,7 +2,7 @@
   id: RPD
   parent: [ BaseItem, BaseEngineeringContraband ]
   name: RPD
-  description: The rapid construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
+  description: The rapid construction device can be used to quickly place and remove various station structures and fixtures.
   components:
   - type: RCD
     isRpd: true
@@ -31,12 +31,12 @@
     charges: 45
     maxCharges: 45
   - type: Sprite
-    sprite: _Backmen/Objects/Tools/rpd.rsi
+    sprite: _DeadSpace/Objects/Tools/rpd.rsi
     state: icon
   - type: Item
     size: Normal
   - type: Clothing
-    sprite: _Backmen/Objects/Tools/rpd.rsi
+    sprite: _DeadSpace/Objects/Tools/rpd.rsi
     quickEquip: false
     slots:
     - Belt

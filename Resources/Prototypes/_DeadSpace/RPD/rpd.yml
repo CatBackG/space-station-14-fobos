@@ -1,7 +1,7 @@
 - type: rcd
   id: PipeFourway
   category: Piping
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/fourway.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/fourway.png
   mode: ConstructObject
   prototype: GasPipeFourway
   cost: 1
@@ -12,7 +12,7 @@
 - type: rcd
   id: PipeStraight
   category: Piping
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/straight.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/straight.png
   mode: ConstructObject
   prototype: GasPipeStraight
   cost: 1
@@ -23,7 +23,7 @@
 - type: rcd
   id: PipeBend
   category: Piping
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/bend.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/bend.png
   mode: ConstructObject
   prototype: GasPipeBend
   cost: 1
@@ -34,7 +34,7 @@
 - type: rcd
   id: PipeTJunction
   category: Piping
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/tjunction.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/tjunction.png
   mode: ConstructObject
   prototype: GasPipeTJunction
   cost: 1
@@ -46,7 +46,7 @@
 - type: rcd
   id: PressurePump
   category: PumpsValves
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/pump_pressure.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/pump_pressure.png
   mode: ConstructObject
   prototype: GasPressurePump
   cost: 1
@@ -58,7 +58,7 @@
 - type: rcd
   id: VolumetricPump
   category: PumpsValves
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/pump_volume.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/pump_volume.png
   mode: ConstructObject
   prototype: GasVolumePump
   cost: 1
@@ -70,7 +70,7 @@
 - type: rcd
   id: ManualValve
   category: PumpsValves
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/pump_manual_valve.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/pump_manual_valve.png
   mode: ConstructObject
   prototype: GasValve
   cost: 1
@@ -82,7 +82,7 @@
 - type: rcd
   id: SignalValve
   category: PumpsValves
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/pump_signal_valve.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/pump_signal_valve.png
   mode: ConstructObject
   prototype: SignalControlledValve
   cost: 1
@@ -94,7 +94,7 @@
 - type: rcd
   id: PressureValve
   category: PumpsValves
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/pneumatic_valve.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/pneumatic_valve.png
   mode: ConstructObject
   prototype: PressureControlledValve
   cost: 1
@@ -107,7 +107,7 @@
 - type: rcd
   id: OutletInjector
   category: Vents
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/injector.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/injector.png
   mode: ConstructObject
   prototype: GasOutletInjector
   cost: 1
@@ -119,7 +119,7 @@
 - type: rcd
   id: VentScrubber
   category: Vents
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/scrub_off.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/scrub_off.png
   mode: ConstructObject
   prototype: GasVentScrubber
   cost: 1
@@ -131,7 +131,7 @@
 - type: rcd
   id: VentGas
   category: Vents
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/vent_off.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/vent_off.png
   mode: ConstructObject
   prototype: GasVentPump
   cost: 1
@@ -143,7 +143,7 @@
 - type: rcd
   id: DualPortVent
   category: Vents
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/dual_port.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/dual_port.png
   mode: ConstructObject
   prototype: GasDualPortVentPump
   cost: 1
@@ -155,7 +155,7 @@
 - type: rcd
   id: VentPassive
   category: Vents
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/vent_passive.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/vent_passive.png
   mode: ConstructObject
   prototype: GasPassiveVent
   cost: 1
@@ -167,7 +167,7 @@
 - type: rcd
   id: Radiator
   category: AtmosphericUtility
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/radiator.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/radiator.png
   mode: ConstructObject
   prototype: HeatExchanger
   cost: 1
@@ -179,7 +179,7 @@
 - type: rcd
   id: RadiatorBend
   category: AtmosphericUtility
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/radiator_bend.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/radiator_bend.png
   mode: ConstructObject
   prototype: HeatExchangerBend
   cost: 1
@@ -191,7 +191,7 @@
 - type: rcd
   id: MixerGas
   category: AtmosphericUtility
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/gas_mixer.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/gas_mixer.png
   mode: ConstructObject
   prototype: GasMixer
   mirrorPrototype: GasMixerFlipped
@@ -204,7 +204,7 @@
 - type: rcd
   id: FilterGas
   category: AtmosphericUtility
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/gas_filter.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/gas_filter.png
   mode: ConstructObject
   prototype: GasFilter
   mirrorPrototype: GasFilterFlipped
@@ -217,7 +217,7 @@
 - type: rcd
   id: CanisterPort
   category: AtmosphericUtility
-  sprite: /Textures/_Backmen/Interface/Radial/RPD/port.png
+  sprite: /Textures/_DeadSpace/Interface/Radial/RPD/port.png
   mode: ConstructObject
   prototype: GasPort
   cost: 1
