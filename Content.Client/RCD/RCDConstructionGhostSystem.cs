@@ -21,9 +21,10 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
 
     private string _placementMode = typeof(AlignRCDConstruction).Name;
     private Direction _placementDirection = default;
-    private bool _useMirrorPrototype = false;
-    public event EventHandler? FlipConstructionPrototype;
+    private bool _useMirrorPrototype = false; // DS14-RPD
+    public event EventHandler? FlipConstructionPrototype; // DS14-RPD
 
+    // DS14-RPD-start
     public override void Initialize()
     {
         base.Initialize();
@@ -66,7 +67,7 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
 
         return true;
     }
-
+    // DS14-RPD-end
 
     public override void Update(float frameTime)
     {
