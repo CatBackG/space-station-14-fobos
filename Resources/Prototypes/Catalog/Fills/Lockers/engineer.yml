@@ -95,7 +95,7 @@
       - id: MedkitOxygenFilled
       - id: HolofanProjector
       - id: RCD
-      - id: RPD # Backmen-Edit-RPD
+      - id: RPD # DS14-RPD
       - id: RCDAmmo
 
 - type: entity
