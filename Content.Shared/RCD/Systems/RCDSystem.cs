@@ -297,6 +297,7 @@ public class RCDSystem : EntitySystem
         Dirty(uid, rcd);
     }
 
+    // DS14-RPD-start
     private void OnRCDConstructionGhostFlipEvent(RCDConstructionGhostFlipEvent ev, EntitySessionEventArgs session)
     {
         var uid = GetEntity(ev.NetEntity);
@@ -316,6 +317,7 @@ public class RCDSystem : EntitySystem
         rcd.UseMirrorPrototype = ev.UseMirrorPrototype;
         Dirty(uid, rcd);
     }
+    // DS14-RPD-end
 
 
     #endregion
