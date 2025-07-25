@@ -42,6 +42,7 @@ public sealed partial class RCDComponent : Component
     [ViewVariables(VVAccess.ReadOnly)]
     public RCDPrototype CachedPrototype { get; set; } = default!;
 
+    // DS14-RPD-start
     /// <summary>
     /// Indicates if a mirrored version of the construction prototype should be used (if available)
     /// </summary>
@@ -53,6 +54,7 @@ public sealed partial class RCDComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool IsRpd { get; set; } = false;
+    // DS14-RPD-end
 
     /// <summary>
     /// The direction constructed entities will face upon spawning
