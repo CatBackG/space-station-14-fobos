@@ -124,6 +124,7 @@ public sealed partial class RCDPrototype : IPrototype
     public RcdRotation Rotation { get; private set; } = RcdRotation.User;
 }
 
+// DS14-RPD-start
 /// <summary>
 /// Represents a group/category of RCD actions in the radial UI.
 /// </summary>
@@ -145,6 +146,7 @@ public sealed class RCDGroupPrototype : IPrototype
     [DataField(required: true)]
     public SpriteSpecifier? Sprite { get; private set; } = default!;
 }
+// DS14-RPD-end
 
 public enum RcdMode : byte
 {
