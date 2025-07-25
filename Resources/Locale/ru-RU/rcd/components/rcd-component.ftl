@@ -33,11 +33,13 @@ rcd-component-airlocks = Шлюзы
 rcd-component-electrical = Электроприборы
 rcd-component-lighting = Освещение
 
+### DS14-RPD-start
 ### RPD category names
 rpd-component-piping = Трубы
 rpd-component-pumpsvalves = Насосы & Вентили
 rpd-component-vents = Вентиляция
 rpd-component-atmosphericutility = Атмосферные Утилиты
+### DS14-RPD-end
 
 ### Prototype names (note: constructable items will be puralized)
 
