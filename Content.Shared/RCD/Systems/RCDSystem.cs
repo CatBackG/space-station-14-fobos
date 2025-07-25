@@ -66,7 +66,7 @@ public class RCDSystem : EntitySystem
         SubscribeLocalEvent<RCDComponent, DoAfterAttemptEvent<RCDDoAfterEvent>>(OnDoAfterAttempt);
         SubscribeLocalEvent<RCDComponent, RCDSystemMessage>(OnRCDSystemMessage);
         SubscribeNetworkEvent<RCDConstructionGhostRotationEvent>(OnRCDconstructionGhostRotationEvent);
-        SubscribeNetworkEvent<RCDConstructionGhostFlipEvent>(OnRCDConstructionGhostFlipEvent);
+        SubscribeNetworkEvent<RCDConstructionGhostFlipEvent>(OnRCDConstructionGhostFlipEvent); // DS14-RPD
     }
 
     #region Event handling
@@ -474,6 +474,7 @@ public class RCDSystem : EntitySystem
         // Attempt to deconstruct a floor tile
         if (target == null)
         {
+            // DS14-RPD-start
             if (component.IsRpd)
             {
                 if (popMsgs)
@@ -481,6 +482,7 @@ public class RCDSystem : EntitySystem
 
                 return false;
             }
+            // DS14-RPD-end
             // The tile is empty
             if (mapGridData.Tile.Tile.IsEmpty)
             {
@@ -514,6 +516,7 @@ public class RCDSystem : EntitySystem
         // Attempt to deconstruct an object
         else
         {
+            // DS14-RPD-start
             // The object is not in the RPD whitelist
             if (!TryComp<RCDDeconstructableComponent>(target, out var deconstructible) || !deconstructible.RpdDeconstructable && component.IsRpd)
             {
@@ -522,9 +525,10 @@ public class RCDSystem : EntitySystem
 
                 return false;
             }
+            // DS14-RPD-end
 
             // The object is not in the whitelist
-            if (!deconstructible.Deconstructable)
+            if (!deconstructible.Deconstructable) // DS14-RPD
             {
                 if (popMsgs)
                     _popup.PopupClient(Loc.GetString("rcd-component-deconstruct-target-not-on-whitelist-message"), uid, user);
@@ -556,13 +560,15 @@ public class RCDSystem : EntitySystem
                 break;
 
             case RcdMode.ConstructObject:
+                // DS14-RPD-start
                 var proto = (component.UseMirrorPrototype &&
                     !string.IsNullOrEmpty(component.CachedPrototype.MirrorPrototype))
                     ? component.CachedPrototype.MirrorPrototype
                     : component.CachedPrototype.Prototype;
 
                 var ent = Spawn(proto, _mapSystem.GridTileToLocal(mapGridData.GridUid, mapGridData.Component, mapGridData.Position));
-
+                // DS14-RPD-end
+                
                 switch (component.CachedPrototype.Rotation)
                 {
                     case RcdRotation.Fixed:
@@ -635,12 +641,14 @@ public class RCDSystem : EntitySystem
 
     public void UpdateCachedPrototype(EntityUid uid, RCDComponent component)
     {
+        // DS14-RPD-start
         if (component.ProtoId.Id != component.CachedPrototype?.Prototype ||
             (component.CachedPrototype?.MirrorPrototype != null &&
              component.ProtoId.Id != component.CachedPrototype?.MirrorPrototype))
         {
+        // DS14-RPD-end
             component.CachedPrototype = _protoManager.Index(component.ProtoId);
-        }
+        } // DS14-RPD
     }
 
     #endregion
