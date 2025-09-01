@@ -92,7 +92,11 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
 
     private void HandleMenuOptionClick(RCDPrototype proto)
     {
+        // A predicted message cannot be used here as the RCD UI is closed immediately
+        // after this message is sent, which will stop the server from receiving it
+        
         SendMessage(new RCDSystemMessage(proto.ID));
+
 
         if (_playerManager.LocalSession?.AttachedEntity == null)
             return;
