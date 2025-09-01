@@ -94,7 +94,6 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
     {
         // A predicted message cannot be used here as the RCD UI is closed immediately
         // after this message is sent, which will stop the server from receiving it
-        
         SendMessage(new RCDSystemMessage(proto.ID));
 
 
